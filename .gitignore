@@ -1,0 +1,13 @@
+target/*
+.settings/*
+.classpath
+.project
+.idea
+*.iml
+/target
+
+generated/
+
+# Easier branch switching
+springboot-phones-client/
+springboot-phones-server/
