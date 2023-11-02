@@ -30,7 +30,7 @@ public class Phone {
     private LocalDateTime bookedAt;
 
     @Column(name = "booker")
-    @Pattern(regexp = "^[A-Za-z]+[A-Z a-z]+$", message = "Username must contain only English alphabet characters and spaces (after first letter only)")
+    @Pattern(regexp = "^[A-Za-z]+[A-Z a-z]+$", message = "Booker name must contain only English alphabet characters and spaces (after first letter only)")
     @Size(min = 5, max = 200, message = "Booker name must be between 5 and 200 characters")
     private String booker;
 

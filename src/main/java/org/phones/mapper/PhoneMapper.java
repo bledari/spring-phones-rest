@@ -31,4 +31,18 @@ public class PhoneMapper {
         return phones.stream().map(phone -> toPhoneDto(phone)).toList();
     }
 
+    public Phone toPhone(PhoneDto phoneDto) {
+        Phone phone = new Phone();
+        phone.setId(phoneDto.getId());
+        phone.setInfo(phoneApiInfoMapper.toPhoneApiInfo(phoneDto.getInfo()));
+        phone.setAvailability(phoneDto.getAvailability());
+        phone.setBookedAt(phoneDto.getBookedAt());
+        phone.setBooker(phoneDto.getBooker());
+        return phone;
+    }
+
+    public Collection<Phone> toPhones(Collection<PhoneDto> phoneDtos) {
+        return phoneDtos.stream().map(phoneDto -> toPhone(phoneDto)).toList();
+    }
+
 }

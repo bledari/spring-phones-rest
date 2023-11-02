@@ -75,7 +75,7 @@ There are some tests but it is still work in progress
 ### Steps:
 
 1) In the command line
-```
+```shell
 git clone https://github.com/bledari/spring-phones-rest.git
 ```
 2) Inside IDEs
@@ -83,7 +83,18 @@ git clone https://github.com/bledari/spring-phones-rest.git
    See specific guidelines on importing Maven project for each IDE
 
 
-## Publishing a Docker image
+## Docker image
+
+1) In the command line, after installing docker, build image
+```shell
+docker build -t spring-phones .
+```
+2) Run container from image
+```shell
+docker run -p 9001:9001 spring-phones
+```
+
+## Publishing the Docker image
 
 Testing phase. Work in progress
 
